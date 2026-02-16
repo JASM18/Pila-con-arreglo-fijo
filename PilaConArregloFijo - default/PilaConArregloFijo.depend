@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1770918197 source:c:\users\axel\desktop\4to semestre\estructura de datos\pilaconarreglofijo\main.cpp
+	<iostream>
+	"Pila.hpp"
+
+1770658842 c:\users\axel\desktop\4to semestre\estructura de datos\pilaconarreglofijo\include\pila.hpp
+
+1770828634 source:c:\users\axel\desktop\4to semestre\estructura de datos\pilaconarreglofijo\src\pila.cpp
+	<iostream>
+	"Pila.h"
+
+1770828147 c:\users\axel\desktop\4to semestre\estructura de datos\pilaconarreglofijo\include\pila.h
+
+1771258057 c:\users\axel\desktop\4to semestre\estructura de datos\pilaconarreglofijo\pila.hpp
+	<exception>
+
+1770917376 source:c:\users\axel\desktop\4to semestre\estructura de datos\pilaconarreglofijo\pila.cpp
+	<iostream>
+	"Pila.hpp"
+
