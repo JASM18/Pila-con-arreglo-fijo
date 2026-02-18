@@ -62,7 +62,7 @@ bool Pila<T, tam>::EstaVacia() const
 template <typename T, int tam>
 bool Pila<T, tam>::EstaLlena() const
 {
-    if(tope == MAX_TAM-1){
+    if(tope == tam-1){
         return true;
     }
 

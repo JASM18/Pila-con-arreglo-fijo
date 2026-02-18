@@ -4,8 +4,6 @@
 #include <iostream>
 #include <exception> // Esto es para poder heredar la clase exception en PilaVacia
 
-#define MAX_TAM 10
-
 template <typename T = std::string, int tam = 10> // Ahora la clase es una plantilla de clase
 class Pila{
     template <typename TT, int ttam>

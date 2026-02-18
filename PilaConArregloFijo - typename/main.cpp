@@ -18,6 +18,8 @@ int main()
             A.Agregar(i);
         }
 
+        A.Agregar(6);
+
         cout << endl;
 
         A.Imprimir();
