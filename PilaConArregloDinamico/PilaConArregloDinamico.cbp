@@ -14,6 +14,9 @@
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
+				<Linker>
+					<Add library="C:/Users/Axel/Desktop/4to semestre/Estructura de Datos/Clase/PilaConArregloFijo - versiones/PilaConArregloFijo - typename/libVector.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/PilaConArregloDinamico" prefix_auto="1" extension_auto="1" />

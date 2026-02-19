@@ -15,6 +15,22 @@ public:
 
     /** \brief
      *
+     * \param pila const Pila<T>&
+     *
+     */
+    Pila(const Pila<T> &pila); // Constructor de copias
+
+    /** \brief
+     *
+     *
+     */
+    ~Pila();
+
+    Pila & operator=(const Pila<T> &pila);
+
+
+    /** \brief
+     *
      * \param valor int
      * \return void
      *
@@ -40,13 +56,6 @@ public:
      *
      */
     bool EstaVacia() const;
-
-    /** \brief
-     *
-     * \return bool
-     *
-     */
-    bool EstaLlena() const;
 
     /** \brief
      *
@@ -85,6 +94,10 @@ public:
 private:
     int capacidad, tope; //!< Member variable "tope"
     T *elemento; //!< Member variable
+
+    bool EstaLlena() const;
+
+    void Redimensionar();
 };
 
 #include "Pila.tpp"

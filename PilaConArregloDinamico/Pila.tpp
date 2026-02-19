@@ -1,20 +1,55 @@
 #define SIN_ELEMENTOS -1
 
+//***********************************
+// CONSTRUCTORES
+//***********************************
+
 template <typename T /*= int*/>
-Pila<T>::Pila() // Como ahora la clase es una plantilla de clase, hay que ponerle Pila<T>
+Pila<T>::Pila() : capacidad(15), tope(SIN_ELEMENTOS)
 {
-    capacidad = 0;
-    tope = SIN_ELEMENTOS;
-    elemento = nullptr;
+    // FALTA POR HACER: Gestionar la excepción potencial arrojada por new
+    elemento = new T[capacidad];
 }
 
+//***********************************
+
+template <typename T>
+Pila<T>::Pila(const Pila<T> &pila) : elemento(nullptr)
+{
+    *this = pila;
+}
+
+//***********************************
+
+template <typename T>
+Pila<T> & Pila<T>::operator=(const Pila<T> &pila)
+{
+    if(this == &pila){
+        return *this;
+    }
+
+    // Codigo de copiado
+
+    return *this;
+}
+
+//***********************************
+
+template <typename T>
+Pila<T>::~Pila()
+{
+    delete[] elemento;
+}
+
+//***********************************
+// MéTODOS
 //***********************************
 
 template <typename T>
 void Pila<T>::Agregar(T valor)
 {
     if( EstaLlena() ){
-        throw "Pila llena";
+        Redimensionar();
     }
     ++tope;
     elemento[tope] = valor;
@@ -112,6 +147,18 @@ template <typename T>
 const char *Pila<T>::PilaVacia::what() const throw()
 {
     return "La pila se encuentra vac\241a";
+}
+
+//***********************************
+
+template <typename T>
+void Pila<T>::Redimensionar()
+{
+    // Guardar el arreglo en un puntero auxuliar
+    // Borrar la memoria vieja
+    // Crear nueva memoria para el
+
+    capacidad *= 2;
 }
 
 //***********************************
